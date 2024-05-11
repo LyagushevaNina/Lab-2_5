@@ -41,12 +41,12 @@ internal class Program
 
                         value.Add(i);
                     }
-                    // Числа, у которых одинаковый хеш
+                    // Числа, у которых одинаковая хэш-функция
                     foreach (KeyValuePair<string, List<int>> entry in hashTable)
                     {
                         if (entry.Value.Count > 1)
                         {
-                            Console.WriteLine($"Хеш: {entry.Key}, Числа: ");
+                            Console.WriteLine($"Хэш: {entry.Key}, Числа: ");
                             Console.WriteLine(string.Join(", ", entry.Value));
                             Console.WriteLine();
                         }
@@ -60,7 +60,7 @@ internal class Program
                     return;
 
                 default:
-                    Console.WriteLine("ОШИБКА: Неверный номер.");
+                    Console.WriteLine("ОШИБКА");
                     break;
             }
         }
@@ -89,7 +89,7 @@ internal class Program
                 return iValue;
             }
 
-            Console.WriteLine("ОШИБКА: Неверный формат. Введите целочисленное значение...");
+            Console.WriteLine("ОШИБКА");
         }
     }
 
